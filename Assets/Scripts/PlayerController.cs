@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
         var horizontal = Input.GetAxisRaw("Horizontal");
         var vertical = Input.GetAxisRaw("Vertical");
         Vector2 mySpeed = new Vector2(horizontal, vertical) * speed;
-        rb.linearVelocity = mySpeed;
+        mySpeed.Normalize();
+        Debug.Log(mySpeed);
+        rb.linearVelocity = mySpeed * speed;
     }
 }

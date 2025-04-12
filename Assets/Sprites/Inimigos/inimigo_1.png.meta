@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -81,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,10 +109,10 @@ TextureImporter:
       name: inimigo_1_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 56
-        height: 106
+        x: 0
+        y: 0
+        width: 66
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +131,10 @@ TextureImporter:
       name: inimigo_1_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 8
-        width: 134
-        height: 89
+        x: 66
+        y: 0
+        width: 66
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: inimigo_1_2
       rect:
         serializedVersion: 2
-        x: 200
+        x: 132
         y: 0
-        width: 59
-        height: 106
+        width: 66
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,11 +171,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: inimigo_1_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 0
+        width: 66
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bd258e31e25c8448f20c6fa61b58d6
+      internalID: 623389401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: af8460881e725e4429341be2f2497f7e
     internalID: 0
     vertices: []
     indices: 
@@ -184,7 +206,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      inimigo_1_0: 2408966869642464458
+      inimigo_1_1: 4208378300384586734
+      inimigo_1_2: 1387281697673004411
+      inimigo_1_3: 623389401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

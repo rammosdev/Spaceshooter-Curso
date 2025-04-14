@@ -1,13 +1,19 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InimigoController : MonoBehaviour
 {
     Rigidbody2D rb;
+    [Header("Atributos")]
+    public int vida;
     public float speed;
+    [Header("Tiro")]
     public GameObject bullet;
     public GameObject tiroPos;
     private float waitShoot = 1f;
     private SpriteRenderer sprite;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,7 +36,6 @@ public class InimigoController : MonoBehaviour
     {
 
         bool visivel = sprite.isVisible;
-        Debug.Log(visivel);
         if (visivel == true)
         {
             //Diminuindo a espera pelo deltaTime
@@ -43,5 +48,12 @@ public class InimigoController : MonoBehaviour
         }
 
 
+    }
+
+    public void PerdeVida(int dano)
+    {
+
+        vida -= dano;
+        Debug.Log("Funfou");
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.InputSystem.LowLevel.InputEventTrace;
 
 public class TiroController : MonoBehaviour
 {
@@ -19,9 +20,16 @@ public class TiroController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("BulletDestroyer"))
-        {
-            Destroy(gameObject);
-        }
+        //Pegar o método PerdeVida e aplicar o dano
+        if (collision.CompareTag("Inimigo1"))
+            {
+                collision.GetComponent<InimigoController>().PerdeVida(1);
+            }
+
+        if (collision.CompareTag("Player"))
+            {
+                collision.GetComponent<PlayerController>().PerdeVida(1);
+            }
+        Destroy(gameObject);
     }
 }

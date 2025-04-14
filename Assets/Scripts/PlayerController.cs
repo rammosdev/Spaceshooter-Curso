@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Atributos")]
     public float speed;
+    public int vida;
     public Rigidbody2D rb;
+    [Header("Tiro")]
     public GameObject bullet;
     public GameObject bulletPos;
 
@@ -37,5 +40,11 @@ public class PlayerController : MonoBehaviour
             Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
         }
         
+    }
+
+    public void PerdeVida(int dano)
+    {
+        vida -= dano;
+        Debug.Log(vida);
     }
 }

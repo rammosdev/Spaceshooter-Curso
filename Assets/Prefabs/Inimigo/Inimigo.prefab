@@ -181,6 +181,7 @@ MonoBehaviour:
   speed: 3
   bullet: {fileID: 8982737493227629144, guid: 40789f12b62bd7140884abddcc220427, type: 3}
   tiroPos: {fileID: 4153474578375347624}
+  ExplosaoMorte: {fileID: 1993195405524880793, guid: 15102160ca0f79b42aff303933de3b23, type: 3}
 --- !u!95 &3275369066134377138
 Animator:
   serializedVersion: 7

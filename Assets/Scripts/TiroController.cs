@@ -6,6 +6,7 @@ public class TiroController : MonoBehaviour
 
     private Rigidbody2D rb;
     [SerializeField] private float bulletSpeed;
+    public GameObject ImpactoTiro;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,12 +25,14 @@ public class TiroController : MonoBehaviour
         if (collision.CompareTag("Inimigo1"))
             {
                 collision.GetComponent<InimigoController>().PerdeVida(1);
-            }
+        }
 
         if (collision.CompareTag("Player"))
             {
                 collision.GetComponent<PlayerController>().PerdeVida(1);
             }
+
         Destroy(gameObject);
+        Instantiate(ImpactoTiro, transform.position, transform.rotation);
     }
 }

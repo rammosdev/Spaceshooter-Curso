@@ -12,7 +12,7 @@ public class InimigoController : MonoBehaviour
     public GameObject tiroPos;
     private float waitShoot = 1f;
     private SpriteRenderer sprite;
-
+    public GameObject ExplosaoMorte;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,6 +54,11 @@ public class InimigoController : MonoBehaviour
     {
 
         vida -= dano;
-        Debug.Log("Funfou");
+
+        if (vida == 0)
+        {
+            Instantiate(ExplosaoMorte, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
     }
 }

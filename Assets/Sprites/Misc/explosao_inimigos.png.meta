@@ -1,40 +1,79 @@
 fileFormatVersion: 2
-guid: 28680a637b7798342b6268ddfca041d4
+guid: ab1386bdbef19fb4bbb8670c6193f393
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6882866825459703631
-    second: impacto_tiro_0
+      213: -8953742155334949042
+    second: explosao_inimigos_0
   - first:
-      213: 85622153595577498
-    second: impacto_tiro_1
+      213: 6114366483288496751
+    second: explosao_inimigos_1
   - first:
-      213: 5959196588681636048
-    second: impacto_tiro_2
+      213: -3210091386923635887
+    second: explosao_inimigos_2
   - first:
-      213: 4771123374156008390
-    second: impacto_tiro_3
+      213: -1686293948461396461
+    second: explosao_inimigos_3
   - first:
-      213: 5912880381088570453
-    second: impacto_tiro_4
+      213: 50195773862858911
+    second: explosao_inimigos_4
   - first:
-      213: 600951623881369971
-    second: impacto_tiro_5
+      213: -7599391935130854525
+    second: explosao_inimigos_5
   - first:
-      213: -8199533813077450098
-    second: impacto_tiro_6
+      213: -1546182021360983618
+    second: explosao_inimigos_6
   - first:
-      213: 1539493827272023091
-    second: impacto_tiro_7
+      213: -3459482008355839220
+    second: explosao_inimigos_7
   - first:
-      213: 4931369735829915681
-    second: impacto_tiro_8
+      213: -3819490883757605635
+    second: explosao_inimigos_8
   - first:
-      213: -2171192743783082718
-    second: impacto_tiro_9
+      213: 6114362762291119082
+    second: explosao_inimigos_9
   - first:
-      213: -7410945418677954503
-    second: impacto_tiro_10
+      213: -4402680062333374197
+    second: explosao_inimigos_10
+  - first:
+      213: 5224772360975615869
+    second: explosao_inimigos_11
+  - first:
+      213: 7305913945896097954
+    second: explosao_inimigos_12
+  - first:
+      213: 589515180063847273
+    second: explosao_inimigos_13
+  - first:
+      213: -922666393731159311
+    second: explosao_inimigos_14
+  - first:
+      213: -7014739906278570752
+    second: explosao_inimigos_15
+  - first:
+      213: -8923761905934530235
+    second: explosao_inimigos_16
+  - first:
+      213: -7224355438302824104
+    second: explosao_inimigos_17
+  - first:
+      213: 4430802110093031912
+    second: explosao_inimigos_18
+  - first:
+      213: 5312753133792833258
+    second: explosao_inimigos_19
+  - first:
+      213: 1403407836266428367
+    second: explosao_inimigos_20
+  - first:
+      213: -313739160902925120
+    second: explosao_inimigos_21
+  - first:
+      213: 8846331875055357045
+    second: explosao_inimigos_22
+  - first:
+      213: 6726410036477586472
+    second: explosao_inimigos_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -67,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -105,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,13 +169,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: impacto_tiro_0
+      name: explosao_inimigos_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 50
+        width: 117
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,174 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4f98d729ead48f50800000000000000
-      internalID: 6882866825459703631
+      spriteID: e47e1dcd2faedb380800000000000000
+      internalID: -8953742155334949042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: impacto_tiro_1
+      name: explosao_inimigos_1
       rect:
         serializedVersion: 2
-        x: 284
-        y: 37
-        width: 28
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a94e7f125e0303100800000000000000
-      internalID: 85622153595577498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impacto_tiro_2
-      rect:
-        serializedVersion: 2
-        x: 372
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d8a61769b153b250800000000000000
-      internalID: 5959196588681636048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impacto_tiro_3
-      rect:
-        serializedVersion: 2
-        x: 386
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6cbc1282e6f663240800000000000000
-      internalID: 4771123374156008390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impacto_tiro_4
-      rect:
-        serializedVersion: 2
-        x: 260
-        y: 16
-        width: 34
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 55c192af065ce0250800000000000000
-      internalID: 5912880381088570453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impacto_tiro_5
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 16
-        width: 34
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 379a4a46152075800800000000000000
-      internalID: 600951623881369971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impacto_tiro_6
-      rect:
-        serializedVersion: 2
-        x: 347
-        y: 19
-        width: 27
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e82e6b3a077653e80800000000000000
-      internalID: -8199533813077450098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impacto_tiro_7
-      rect:
-        serializedVersion: 2
-        x: 392
-        y: 19
-        width: 27
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 33c9474ba716d5510800000000000000
-      internalID: 1539493827272023091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impacto_tiro_8
-      rect:
-        serializedVersion: 2
-        x: 290
+        x: 117
         y: 0
-        width: 16
-        height: 8
+        width: 117
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1280140b5aebf6440800000000000000
-      internalID: 4931369735829915681
+      spriteID: f6a17f6dbe79ad450800000000000000
+      internalID: 6114366483288496751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: impacto_tiro_9
+      name: explosao_inimigos_2
       rect:
         serializedVersion: 2
-        x: 377
+        x: 234
         y: 0
-        width: 6
-        height: 6
+        width: 117
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,20 +228,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22557e7f3bf5ed1e0800000000000000
-      internalID: -2171192743783082718
+      spriteID: 15b20e134e67373d0800000000000000
+      internalID: -3210091386923635887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: impacto_tiro_10
+      name: explosao_inimigos_3
       rect:
         serializedVersion: 2
-        x: 383
+        x: 351
         y: 0
-        width: 6
-        height: 6
+        width: 117
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,8 +250,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93854e51868072990800000000000000
-      internalID: -7410945418677954503
+      spriteID: 31e411796941998e0800000000000000
+      internalID: -1686293948461396461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosao_inimigos_4
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 117
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9052565ac452b000800000000000000
+      internalID: 50195773862858911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosao_inimigos_5
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 0
+        width: 117
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b9e8d5c49898690800000000000000
+      internalID: -7599391935130854525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosao_inimigos_6
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 117
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1eea2c4abda8ae0800000000000000
+      internalID: -1546182021360983618
       vertices: []
       indices: 
       edges: []
@@ -375,7 +326,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0d0ecbde5c756fd489f7335fc2ca46a4
     internalID: 0
     vertices: []
     indices: 
@@ -384,7 +335,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      explosao_inimigos_0: -8953742155334949042
+      explosao_inimigos_1: 6114366483288496751
+      explosao_inimigos_2: -3210091386923635887
+      explosao_inimigos_3: -1686293948461396461
+      explosao_inimigos_4: 50195773862858911
+      explosao_inimigos_5: -7599391935130854525
+      explosao_inimigos_6: -1546182021360983618
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

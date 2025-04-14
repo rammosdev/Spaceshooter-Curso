@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  ImpactoTiro: {fileID: 1052538835160078771, guid: d7574807f70c58d4e8be35a0793ba471, type: 3}
 --- !u!50 &3195193247135521433
 Rigidbody2D:
   serializedVersion: 5

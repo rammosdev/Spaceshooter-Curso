@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [Header("Tiro")]
     public GameObject bullet;
     public GameObject bulletPos;
-
+    public GameObject explosao;
     void Start()
     {
         
@@ -45,6 +45,11 @@ public class PlayerController : MonoBehaviour
     public void PerdeVida(int dano)
     {
         vida -= dano;
+        if (vida <= 0)
+        {
+            Destroy(gameObject);
+            Instantiate(explosao, transform.position, transform.rotation);
+        }
         Debug.Log(vida);
     }
 }

@@ -1,18 +1,14 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class InimigoController : MonoBehaviour
+public class InimigoController : InimigoPai
 {
     Rigidbody2D rb;
-    [Header("Atributos")]
-    public int vida;
-    public float speed;
     [Header("Tiro")]
     public GameObject bullet;
     public GameObject tiroPos;
     private float waitShoot = 1f;
     private SpriteRenderer sprite;
-    public GameObject ExplosaoMorte;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,15 +46,4 @@ public class InimigoController : MonoBehaviour
 
     }
 
-    public void PerdeVida(int dano)
-    {
-
-        vida -= dano;
-
-        if (vida == 0)
-        {
-            Instantiate(ExplosaoMorte, transform.position, transform.rotation);
-            Destroy(gameObject);
-        }
-    }
 }

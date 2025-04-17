@@ -7,7 +7,7 @@ public class InimigoController2 : InimigoPai
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.linearVelocity = new Vector2(0f, -speed);
+        rb.linearVelocity = Vector2.down * speed;
     }
 
     // Update is called once per frame

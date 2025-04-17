@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Bullet
   - BulletDestroyer
-  - Inimigo1
+  - Inimigo
   layers:
   - Default
   - TransparentFX

@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0616e6f4aa9dd4a4a90fec8151dce928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   vida: 2
   "explos\xE3o": {fileID: 1993195405524880793, guid: 15102160ca0f79b42aff303933de3b23, type: 3}
   bullet: {fileID: 8982737493227629144, guid: 40789f12b62bd7140884abddcc220427, type: 3}

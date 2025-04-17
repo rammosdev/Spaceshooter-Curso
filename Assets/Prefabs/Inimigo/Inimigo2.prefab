@@ -202,6 +202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04aed2a51c14f0447827edee2c7c8575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  vida: 3
+  speed: 2
+  vida: 2
   "explos\xE3o": {fileID: 1993195405524880793, guid: 15102160ca0f79b42aff303933de3b23, type: 3}

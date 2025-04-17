@@ -5,8 +5,8 @@ public class InimigoPai : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     //Atributos que todos os inimigos devem ter
     [Header("Atributos")]
-    public float speed;
-    public int vida;
+    [SerializeField]protected float speed;
+    [SerializeField]protected int vida;
     [Header("Assets")]
     public GameObject explosão;
     void Start()

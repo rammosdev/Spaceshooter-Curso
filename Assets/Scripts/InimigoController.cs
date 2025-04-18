@@ -5,9 +5,6 @@ public class InimigoController : InimigoPai
 {
     Rigidbody2D rb;
     [Header("Tiro")]
-    public GameObject bullet;
-    public GameObject tiroPos;
-    private float waitShoot = 1f;
     private SpriteRenderer sprite;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,7 +35,7 @@ public class InimigoController : InimigoPai
             waitShoot -= Time.deltaTime;
             if (waitShoot <= 0)
             {
-                Instantiate(bullet, tiroPos.transform.position, tiroPos.transform.rotation);
+                Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
                 waitShoot = Random.Range(1.5f, 2f);
             }
         }

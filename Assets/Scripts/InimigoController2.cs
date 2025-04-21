@@ -34,6 +34,10 @@ public class InimigoController2 : InimigoPai
                 direcao.Normalize();
                 //Dando a direção do tiro
                 tiro.GetComponent<Rigidbody2D>().linearVelocity = direcao * bulletSpeed;
+                //Dando o ângulo certo do tiro
+                float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+                //Passando o angulo
+                tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f);
 
             }
         }

@@ -35,8 +35,10 @@ public class InimigoController : InimigoPai
             waitShoot -= Time.deltaTime;
             if (waitShoot <= 0)
             {
-                Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
+                GameObject tiro = Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
                 waitShoot = Random.Range(1.5f, 2f);
+                tiro.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
+                
             }
         }
 

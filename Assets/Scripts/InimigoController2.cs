@@ -26,7 +26,7 @@ public class InimigoController2 : InimigoPai
             if (waitShoot <= 0f)
             {
                 Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
-                waitShoot = Random.Range(1f, 2f);
+                waitShoot = Random.Range(1f, 3f);
             }
         }
 

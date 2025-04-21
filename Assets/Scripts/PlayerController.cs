@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public GameObject bulletPos;
     public GameObject explosao;
+    [SerializeField] private float bulletSpeed;
     void Start()
     {
         
@@ -37,7 +38,10 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
+            GameObject tiro = Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
+            //Dar a direção para o rb do tiro
+            tiro.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
+
         }
         
     }

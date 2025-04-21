@@ -208,6 +208,7 @@ MonoBehaviour:
   "explos\xE3o": {fileID: 1993195405524880793, guid: 15102160ca0f79b42aff303933de3b23, type: 3}
   bullet: {fileID: 4035015068998463631, guid: cabd43b25caa5744996aaba946afc471, type: 3}
   bulletPos: {fileID: 6452140695116044647}
+  bulletSpeed: 5
 --- !u!1 &6452140695116044647
 GameObject:
   m_ObjectHideFlags: 0

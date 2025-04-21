@@ -25,8 +25,16 @@ public class InimigoController2 : InimigoPai
             waitShoot -= Time.deltaTime;
             if (waitShoot <= 0f)
             {
-                Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
+                GameObject tiro = Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
                 waitShoot = Random.Range(1f, 3f);
+                //Encontrando o player na cena
+                var player = FindFirstObjectByType<PlayerController>();
+                //Encontrando o valor da direção
+                Vector2 direcao = player.transform.position - tiro.transform.position;
+                direcao.Normalize();
+                //Dando a direção do tiro
+                tiro.GetComponent<Rigidbody2D>().linearVelocity = direcao * bulletSpeed;
+
             }
         }
 

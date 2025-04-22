@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InimigoPai : MonoBehaviour
@@ -34,5 +35,14 @@ public class InimigoPai : MonoBehaviour
             Destroy(gameObject);
             Instantiate(explosão, transform.position, transform.rotation);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("BulletDestroyer"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

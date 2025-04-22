@@ -3,6 +3,7 @@ using UnityEngine;
 public class InimigoController2 : InimigoPai
 {
     Rigidbody2D rb;
+    [SerializeField] private float yMax = 2.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,6 +16,7 @@ public class InimigoController2 : InimigoPai
     void Update()
     {
         Atirando();
+        Movimentação();
     }
 
     private void Atirando()
@@ -22,26 +24,47 @@ public class InimigoController2 : InimigoPai
         bool visivel = GetComponent<SpriteRenderer>().isVisible;
         if (visivel)
         {
-            waitShoot -= Time.deltaTime;
-            if (waitShoot <= 0f)
+            //Encontrando o player na cena
+            var player = FindFirstObjectByType<PlayerController>();
+            if (player)
             {
-                GameObject tiro = Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
-                waitShoot = Random.Range(1f, 3f);
-                //Encontrando o player na cena
-                var player = FindFirstObjectByType<PlayerController>();
-                //Encontrando o valor da direção
-                Vector2 direcao = player.transform.position - tiro.transform.position;
-                direcao.Normalize();
-                //Dando a direção do tiro
-                tiro.GetComponent<Rigidbody2D>().linearVelocity = direcao * bulletSpeed;
-                //Dando o ângulo certo do tiro
-                float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
-                //Passando o angulo
-                tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f);
+                waitShoot -= Time.deltaTime;
+                if (waitShoot <= 0f)
+                {
+                    GameObject tiro = Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
+                    waitShoot = Random.Range(1f, 3f);
 
+                    //Encontrando o valor da direção
+                    Vector2 direcao = player.transform.position - tiro.transform.position;
+                    direcao.Normalize();
+                    //Dando a direção do tiro
+                    tiro.GetComponent<Rigidbody2D>().linearVelocity = direcao * bulletSpeed;
+                    //Dando o ângulo certo do tiro
+                    float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+                    //Passando o angulo
+                    tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f);
+
+                }
             }
         }
 
         
+    }
+
+    private void Movimentação()
+    {
+        if (transform.position.y <= yMax)
+        {
+            //Checando de que lado estou
+            if (transform.position.x >= 0)
+            {
+                Debug.Log("Estou na direita");
+               
+            }
+            else
+            {
+                Debug.Log("Estou na esquerda");
+            }
+        }
     }
 }

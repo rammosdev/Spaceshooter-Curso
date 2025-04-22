@@ -4,6 +4,7 @@ public class InimigoController2 : InimigoPai
 {
     Rigidbody2D rb;
     [SerializeField] private float yMax = 2.5f;
+    private bool isMove = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -56,14 +57,19 @@ public class InimigoController2 : InimigoPai
         if (transform.position.y <= yMax)
         {
             //Checando de que lado estou
-            if (transform.position.x >= 0)
+            if (transform.position.x >= 0 && isMove)
             {
                 Debug.Log("Estou na direita");
+                rb.linearVelocity = new Vector2(-speed, -speed);
+                isMove = false;
                
             }
-            else
+            else if (isMove)
             {
                 Debug.Log("Estou na esquerda");
+                rb.linearVelocity = new Vector2(speed, -speed);
+                isMove = false;
+
             }
         }
     }

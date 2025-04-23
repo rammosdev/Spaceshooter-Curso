@@ -45,4 +45,16 @@ public class InimigoPai : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            Instantiate(explosão, transform.position, transform.rotation);
+
+            //Tirando vida do player
+            collision.gameObject.GetComponent<PlayerController>().PerdeVida(1);
+        }
+    }
 }

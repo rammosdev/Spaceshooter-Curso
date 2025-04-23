@@ -28,12 +28,15 @@ public class InimigoPai : MonoBehaviour
 
     public void PerdeVida(int dano)
     {
-        vida -= dano;
-
-        if (vida <= 0)
+        if (transform.position.y < 5f)
         {
-            Destroy(gameObject);
-            Instantiate(explosão, transform.position, transform.rotation);
+            vida -= dano;
+
+            if (vida <= 0)
+            {
+                Destroy(gameObject);
+                Instantiate(explosão, transform.position, transform.rotation);
+            }
         }
     }
 

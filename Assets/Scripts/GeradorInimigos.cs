@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GeradorInimigos : MonoBehaviour
@@ -5,9 +6,9 @@ public class GeradorInimigos : MonoBehaviour
     [SerializeField] private GameObject[] inimigos;
 
     private int pontos;
-    private int level = 1;
-    private float timeToSpawn = 0f;
-    [SerializeField] private float spawnWait = 5f;
+    [SerializeField]private int level = 1;
+    [SerializeField] private float timeToSpawn;
+    [SerializeField] private float spawnWait;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,17 +18,39 @@ public class GeradorInimigos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Timer();
+        GeraInimigos();
     }
 
-    private void Timer()
+    private void GeraInimigos()
     {
-        spawnWait -= Time.deltaTime;
-        if (spawnWait <= timeToSpawn)
-        {
-            Instantiate(inimigos[0], transform.position, transform.rotation);
-            spawnWait = 5f;
-            
+
+            //Timer
+            spawnWait -= Time.deltaTime;
+            if (spawnWait <= 0f)
+            {
+                int quantidade = level * 4;
+                int qtdInimigo = 0;
+                while (qtdInimigo < quantidade)
+                {
+                    GameObject inimigoCriado;
+
+                    float chance = Random.Range(0f, level);
+
+                    if (chance > 2f)
+                    {
+                        inimigoCriado = inimigos[1];
+                    }
+                    else
+                    {
+                        inimigoCriado = inimigos[0];
+                    }
+
+                    //Criando um inimigo
+                    Vector3 posicao = new Vector3(Random.Range(-8f, 8f), Random.Range(6f, 17f), 0f);
+                    Instantiate(inimigoCriado, posicao, transform.rotation);
+                    qtdInimigo++;
+                    spawnWait = timeToSpawn;
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ public class GeradorInimigos : MonoBehaviour
 {
     [SerializeField] private GameObject[] inimigos;
 
-    private int pontos;
+    [SerializeField]private int pontos;
     [SerializeField]private int level = 1;
     [SerializeField] private float timeToSpawn;
     [SerializeField] private float spawnWait;
@@ -23,7 +23,6 @@ public class GeradorInimigos : MonoBehaviour
 
     private void GeraInimigos()
     {
-
             //Timer
             spawnWait -= Time.deltaTime;
             if (spawnWait <= 0f)
@@ -52,5 +51,10 @@ public class GeradorInimigos : MonoBehaviour
                     spawnWait = timeToSpawn;
             }
         }
+    }
+
+    public void GanhaPontos(int pontos)
+    {
+        this.pontos += pontos;
     }
 }

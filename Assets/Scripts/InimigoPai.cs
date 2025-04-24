@@ -36,6 +36,7 @@ public class InimigoPai : MonoBehaviour
             {
                 Destroy(gameObject);
                 Instantiate(explosão, transform.position, transform.rotation);
+                FindFirstObjectByType<GeradorInimigos>().GanhaPontos(10);
             }
         }
     }

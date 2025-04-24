@@ -127,12 +127,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  vida: 3
+  vida: 999
   rb: {fileID: 171605264590430868}
   bullet: {fileID: 5433294271539276849, guid: e7121ac8935b55f4e848f4f0fe5b61dc, type: 3}
   bulletPos: {fileID: 3337887119124324175}
   explosao: {fileID: 1993195405524880793, guid: 15102160ca0f79b42aff303933de3b23, type: 3}
   bulletSpeed: 10
+  xMin: -8.3
+  yMin: -4.4
+  xMax: 8.3
+  yMax: 4.4
 --- !u!50 &171605264590430868
 Rigidbody2D:
   serializedVersion: 5

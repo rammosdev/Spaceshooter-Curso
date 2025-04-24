@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +11,12 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletPos;
     public GameObject explosao;
     [SerializeField] private float bulletSpeed;
+
+    [SerializeField] private float xMin;
+    [SerializeField] private float yMin;
+    [SerializeField] private float xMax;
+    [SerializeField] private float yMax;
+
     void Start()
     {
         
@@ -19,11 +25,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movimenta��o();
+        Movimentação();
         Atirando();
     }
 
-    public void Movimenta��o()
+    public void Movimentação()
     {
         var horizontal = Input.GetAxisRaw("Horizontal");
         var vertical = Input.GetAxisRaw("Vertical");
@@ -32,6 +38,14 @@ public class PlayerController : MonoBehaviour
         mySpeed.Normalize();
         //Dando velocidade pro RB
         rb.linearVelocity = mySpeed * speed;
+
+        //Limitando a posição dele na tela
+        //Clamp
+        float meuX = Mathf.Clamp(transform.position.x, xMin, xMax);
+        float meuΥ = Mathf.Clamp(transform.position.y, yMin, yMax);
+
+        //Aplicando o meuX e meuΥ na minha posição
+        transform.position = new Vector3(meuX, meuΥ, transform.position.z);
     }
 
     public void Atirando()
@@ -39,7 +53,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             GameObject tiro = Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
-            //Dar a dire��o para o rb do tiro
+            //Dar a direção para o rb do tiro
             tiro.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
 
         }

@@ -203,12 +203,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04aed2a51c14f0447827edee2c7c8575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.5
   vida: 2
+  pontos: 20
   "explos\xE3o": {fileID: 1993195405524880793, guid: 15102160ca0f79b42aff303933de3b23, type: 3}
   bullet: {fileID: 4035015068998463631, guid: cabd43b25caa5744996aaba946afc471, type: 3}
   bulletPos: {fileID: 6452140695116044647}
-  bulletSpeed: 5
+  bulletSpeed: 4.5
   yMax: 2.5
 --- !u!1 &6452140695116044647
 GameObject:

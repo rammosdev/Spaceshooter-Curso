@@ -8,6 +8,7 @@ public class InimigoPai : MonoBehaviour
     [Header("Atributos")]
     [SerializeField]protected float speed;
     [SerializeField]protected int vida;
+    [SerializeField]protected int pontos;
     [Header("Assets")]
     [SerializeField]protected GameObject explosão;
     [Header("Tiro")]
@@ -36,7 +37,10 @@ public class InimigoPai : MonoBehaviour
             {
                 Destroy(gameObject);
                 Instantiate(explosão, transform.position, transform.rotation);
-                FindFirstObjectByType<GeradorInimigos>().GanhaPontos(10);
+                var gerador = FindFirstObjectByType<GeradorInimigos>();
+                gerador.DiminuiQuantidade();
+                gerador.GanhaPontos(pontos);
+                
             }
         }
     }
@@ -46,6 +50,8 @@ public class InimigoPai : MonoBehaviour
         if (collision.CompareTag("BulletDestroyer"))
         {
             Destroy(gameObject);
+            var gerador = FindFirstObjectByType<GeradorInimigos>();
+            gerador.DiminuiQuantidade();
         }
 
     }
@@ -59,6 +65,11 @@ public class InimigoPai : MonoBehaviour
 
             //Tirando vida do player
             collision.gameObject.GetComponent<PlayerController>().PerdeVida(1);
+
+            //Dando pontos
+            var gerador = FindFirstObjectByType<GeradorInimigos>();
+            gerador.DiminuiQuantidade();
+            gerador.GanhaPontos(pontos);
         }
     }
 }

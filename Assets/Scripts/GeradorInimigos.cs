@@ -4,11 +4,17 @@ using UnityEngine;
 public class GeradorInimigos : MonoBehaviour
 {
     [SerializeField] private GameObject[] inimigos;
-
+    [SerializeField] private int qtdInimigo = 0;
+    [Header("Pontuação")]
     [SerializeField]private int pontos;
     [SerializeField]private int level = 1;
+    [SerializeField] private int baseLevel;
+    [Header("Timer")]
     [SerializeField] private float timeToSpawn;
     [SerializeField] private float spawnWait;
+
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,14 +27,21 @@ public class GeradorInimigos : MonoBehaviour
         GeraInimigos();
     }
 
+    public void DiminuiQuantidade()
+    {
+        qtdInimigo--;
+    }
     private void GeraInimigos()
     {
             //Timer
-            spawnWait -= Time.deltaTime;
-            if (spawnWait <= 0f)
+            if (spawnWait > 0 && qtdInimigo  <= 0)
+            {
+                spawnWait -= Time.deltaTime;
+            }   
+            
+            if (spawnWait <= 0f && qtdInimigo <= 0f)
             {
                 int quantidade = level * 4;
-                int qtdInimigo = 0;
                 while (qtdInimigo < quantidade)
                 {
                     GameObject inimigoCriado;
@@ -56,5 +69,10 @@ public class GeradorInimigos : MonoBehaviour
     public void GanhaPontos(int pontos)
     {
         this.pontos += pontos;
+        //Ganhando level se os pontos forem maior que a baseLevel * level
+        if (this.pontos > baseLevel * level)
+        {
+            level++;
+        }
     }
 }

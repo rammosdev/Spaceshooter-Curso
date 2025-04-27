@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public GameObject bulletPos;
     public GameObject explosao;
+    [SerializeField] private int levelTiro;
     [SerializeField] private float bulletSpeed;
 
     [SerializeField] private float xLimite;

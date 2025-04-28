@@ -56,20 +56,23 @@ public class PlayerController : MonoBehaviour
             {
                case 1:
 
-                    CriaTiro(meuTiro1);
+                    CriaTiro(meuTiro1, bulletPos.transform.position);
                    break;
                 case 2:
-                    CriaTiro(meuTiro2);
+                    Vector3 posicao = new Vector3(transform.position.x - 0.45f, transform.position.y + 0.1f, 0f);
+                    CriaTiro(meuTiro2, posicao);
+                    posicao = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
+                    CriaTiro(meuTiro2, posicao);
                     break;
             }
     }
         
     }
 
-    private void CriaTiro(GameObject tiroCriado)
+    private void CriaTiro(GameObject tiroCriado, Vector3 posicao)
     {
 
-           GameObject tiro = Instantiate(tiroCriado, bulletPos.transform.position, bulletPos.transform.rotation);
+           GameObject tiro = Instantiate(tiroCriado, posicao, bulletPos.transform.rotation);
            //Dar a direção para o rb do tiro
            tiro.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
     }

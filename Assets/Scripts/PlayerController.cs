@@ -64,6 +64,13 @@ public class PlayerController : MonoBehaviour
                     posicao = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
                     CriaTiro(meuTiro2, posicao);
                     break;
+                case 3:
+                    CriaTiro(meuTiro1, bulletPos.transform.position);
+                    posicao = new Vector3(transform.position.x - 0.45f, transform.position.y + 0.1f, 0f);
+                    CriaTiro(meuTiro2, posicao);
+                    posicao = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
+                    CriaTiro(meuTiro2, posicao);
+                    break;
             }
     }
         

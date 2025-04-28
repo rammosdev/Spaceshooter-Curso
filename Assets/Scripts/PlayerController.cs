@@ -52,23 +52,26 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            GameObject tiro;
             switch (levelTiro)
             {
                case 1:
 
-                   tiro = Instantiate(meuTiro1, bulletPos.transform.position, bulletPos.transform.rotation);
-                   //Dar a direção para o rb do tiro
-                   tiro.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
+                    CriaTiro(meuTiro1);
                    break;
                 case 2:
-                    tiro = Instantiate(meuTiro2, bulletPos.transform.position, bulletPos.transform.rotation);
-                    //Dar a direção para o rb do tiro
-                    tiro.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
+                    CriaTiro(meuTiro2);
                     break;
             }
     }
         
+    }
+
+    private void CriaTiro(GameObject tiroCriado)
+    {
+
+           GameObject tiro = Instantiate(tiroCriado, bulletPos.transform.position, bulletPos.transform.rotation);
+           //Dar a direção para o rb do tiro
+           tiro.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
     }
 
     public void PerdeVida(int dano)

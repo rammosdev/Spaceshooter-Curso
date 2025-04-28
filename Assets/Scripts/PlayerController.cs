@@ -7,9 +7,10 @@ public class PlayerController : MonoBehaviour
     public int vida;
     public Rigidbody2D rb;
     [Header("Tiro")]
-    public GameObject bullet;
     public GameObject bulletPos;
     public GameObject explosao;
+    public GameObject meuTiro1;
+    public GameObject meuTiro2;
     [SerializeField] private int levelTiro;
     [SerializeField] private float bulletSpeed;
 
@@ -51,11 +52,22 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            GameObject tiro = Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
-            //Dar a direção para o rb do tiro
-            tiro.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
+            GameObject tiro;
+            switch (levelTiro)
+            {
+               case 1:
 
-        }
+                   tiro = Instantiate(meuTiro1, bulletPos.transform.position, bulletPos.transform.rotation);
+                   //Dar a direção para o rb do tiro
+                   tiro.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
+                   break;
+                case 2:
+                    tiro = Instantiate(meuTiro2, bulletPos.transform.position, bulletPos.transform.rotation);
+                    //Dar a direção para o rb do tiro
+                    tiro.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
+                    break;
+            }
+    }
         
     }
 

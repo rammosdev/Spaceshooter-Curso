@@ -9,6 +9,7 @@ public class InimigoPai : MonoBehaviour
     [SerializeField]protected float speed;
     [SerializeField]protected int vida;
     [SerializeField]protected int pontos;
+    [SerializeField] protected GameObject powerUp;
     [Header("Assets")]
     [SerializeField]protected GameObject explosão;
     [Header("Tiro")]
@@ -40,6 +41,7 @@ public class InimigoPai : MonoBehaviour
                 var gerador = FindFirstObjectByType<GeradorInimigos>();
                 gerador.DiminuiQuantidade();
                 gerador.GanhaPontos(pontos);
+                CriaItem();
                 
             }
         }
@@ -70,6 +72,20 @@ public class InimigoPai : MonoBehaviour
             var gerador = FindFirstObjectByType<GeradorInimigos>();
             gerador.DiminuiQuantidade();
             gerador.GanhaPontos(pontos);
+
+            CriaItem();
         }
+    }
+
+    private void CriaItem()
+    {
+        //Criando o power up
+        GameObject pUP = Instantiate(powerUp, transform.position, transform.rotation);
+
+        //Mandando o powerUP ser destruído em três segundos
+        Destroy(pUP, 3f);
+
+        Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        pUP.GetComponent<Rigidbody2D>().linearVelocity = dir;
     }
 }

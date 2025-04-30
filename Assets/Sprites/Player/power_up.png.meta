@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,10 +112,10 @@ TextureImporter:
       name: power_up_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 5
-        width: 62
-        height: 62
+        x: 0
+        y: 0
+        width: 69
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,9 +134,9 @@ TextureImporter:
       name: power_up_1
       rect:
         serializedVersion: 2
-        x: 71
+        x: 69
         y: 0
-        width: 62
+        width: 69
         height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -156,9 +156,9 @@ TextureImporter:
       name: power_up_2
       rect:
         serializedVersion: 2
-        x: 137
+        x: 138
         y: 0
-        width: 71
+        width: 69
         height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -178,10 +178,10 @@ TextureImporter:
       name: power_up_3
       rect:
         serializedVersion: 2
-        x: 209
-        y: 5
-        width: 65
-        height: 62
+        x: 207
+        y: 0
+        width: 69
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7729b87435830664393d8f60f0181fdd
     internalID: 0
     vertices: []
     indices: 
@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      power_up_0: -2092725686814760822
+      power_up_1: 4782488646248722069
+      power_up_2: -8038376232540860490
+      power_up_3: 2400740979886690099
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

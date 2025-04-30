@@ -94,4 +94,18 @@ public class PlayerController : MonoBehaviour
         }
         Debug.Log(vida);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PowerUp"))
+        {
+            if (levelTiro < 3)
+            {
+                levelTiro++;
+                
+            }
+
+            Destroy(collision.gameObject);
+        }
+    }
 }

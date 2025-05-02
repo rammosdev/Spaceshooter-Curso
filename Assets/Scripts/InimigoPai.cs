@@ -41,6 +41,7 @@ public class InimigoPai : MonoBehaviour
                 var gerador = FindFirstObjectByType<GeradorInimigos>();
                 gerador.DiminuiQuantidade();
                 gerador.GanhaPontos(pontos);
+                //Dropando powerup
                 CriaItem();
                 
             }
@@ -79,13 +80,20 @@ public class InimigoPai : MonoBehaviour
 
     private void CriaItem()
     {
-        //Criando o power up
-        GameObject pUP = Instantiate(powerUp, transform.position, transform.rotation);
 
-        //Mandando o powerUP ser destruído em três segundos
-        Destroy(pUP, 3f);
+        //Calculando chance de dropar o item
+        float chance = Random.Range(0f, 1f);
 
-        Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-        pUP.GetComponent<Rigidbody2D>().linearVelocity = dir;
+        if (chance > 0.9f)
+        {
+            //Criando o power up
+            GameObject pUP = Instantiate(powerUp, transform.position, transform.rotation);
+
+            //Mandando o powerUP ser destruído em três segundos
+            Destroy(pUP, 3f);
+
+            Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            pUP.GetComponent<Rigidbody2D>().linearVelocity = dir;
+        }
     }
 }

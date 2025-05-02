@@ -31,6 +31,26 @@ public class GeradorInimigos : MonoBehaviour
     {
         qtdInimigo--;
     }
+    
+    private bool ChecaPosicao(Vector3 posicao, Vector3 size)
+    {
+        //Checando se na posição tem alguém
+        //Estou vendo se na posição tem algum colisor 2D
+        Collider2D hit = Physics2D.OverlapBox(posicao, size, 0f);
+
+        Debug.Log(hit);
+
+        if (hit != null)
+        {
+            return true;
+            //Houve colisão
+        }else
+        {
+            return false;
+            //Não houve colisão
+        }
+
+    }
     private void GeraInimigos()
     {
             //Timer
@@ -42,8 +62,16 @@ public class GeradorInimigos : MonoBehaviour
             if (spawnWait <= 0f && qtdInimigo <= 0f)
             {
                 int quantidade = level * 4;
+            int tentativas = 0;
                 while (qtdInimigo < quantidade)
                 {
+
+                //Fazendo ele sair do laço de repetição se repetir muitas vezes
+                tentativas++;
+                if (tentativas >= 200)
+                {
+                    break;
+                }
                     GameObject inimigoCriado;
 
                     float chance = Random.Range(0f, level);
@@ -59,9 +87,17 @@ public class GeradorInimigos : MonoBehaviour
 
                     //Criando um inimigo
                     Vector3 posicao = new Vector3(Random.Range(-8f, 8f), Random.Range(6f, 17f), 0f);
+                    bool colisão = ChecaPosicao(posicao, inimigoCriado.transform.localScale);
+                    //Se houve colisão, não instantiar
+                    if (colisão)
+                    {
+                        continue;
+                    }
                     Instantiate(inimigoCriado, posicao, transform.rotation);
                     qtdInimigo++;
                     spawnWait = timeToSpawn;
+
+
             }
         }
     }

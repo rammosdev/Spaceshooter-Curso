@@ -181,6 +181,7 @@ MonoBehaviour:
   vida: 2
   pontos: 10
   powerUp: {fileID: 1828437484948774434, guid: 32616e12bc1877f479885465cc128cb3, type: 3}
+  itemRate: 0.95
   "explos\xE3o": {fileID: 1993195405524880793, guid: 15102160ca0f79b42aff303933de3b23, type: 3}
   bullet: {fileID: 8982737493227629144, guid: 40789f12b62bd7140884abddcc220427, type: 3}
   bulletPos: {fileID: 4153474578375347624}

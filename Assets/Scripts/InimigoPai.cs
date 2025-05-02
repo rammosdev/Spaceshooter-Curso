@@ -9,7 +9,8 @@ public class InimigoPai : MonoBehaviour
     [SerializeField]protected float speed;
     [SerializeField]protected int vida;
     [SerializeField]protected int pontos;
-    [SerializeField] protected GameObject powerUp;
+    [SerializeField]protected GameObject powerUp;
+    [SerializeField] protected float itemRate;
     [Header("Assets")]
     [SerializeField]protected GameObject explosão;
     [Header("Tiro")]
@@ -39,7 +40,7 @@ public class InimigoPai : MonoBehaviour
                 Destroy(gameObject);
                 Instantiate(explosão, transform.position, transform.rotation);
                 var gerador = FindFirstObjectByType<GeradorInimigos>();
-                gerador.DiminuiQuantidade();
+                //gerador.DiminuiQuantidade();
                 gerador.GanhaPontos(pontos);
                 //Dropando powerup
                 CriaItem();
@@ -48,13 +49,19 @@ public class InimigoPai : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        var gerador = FindFirstObjectByType<GeradorInimigos>();
+        gerador.DiminuiQuantidade();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("BulletDestroyer"))
         {
             Destroy(gameObject);
-            var gerador = FindFirstObjectByType<GeradorInimigos>();
-            gerador.DiminuiQuantidade();
+            //var gerador = FindFirstObjectByType<GeradorInimigos>();
+            //gerador.DiminuiQuantidade();
         }
 
     }
@@ -71,7 +78,7 @@ public class InimigoPai : MonoBehaviour
 
             //Dando pontos
             var gerador = FindFirstObjectByType<GeradorInimigos>();
-            gerador.DiminuiQuantidade();
+            //gerador.DiminuiQuantidade();
             gerador.GanhaPontos(pontos);
 
             CriaItem();
@@ -84,7 +91,7 @@ public class InimigoPai : MonoBehaviour
         //Calculando chance de dropar o item
         float chance = Random.Range(0f, 1f);
 
-        if (chance > 0.9f)
+        if (chance > itemRate)
         {
             //Criando o power up
             GameObject pUP = Instantiate(powerUp, transform.position, transform.rotation);

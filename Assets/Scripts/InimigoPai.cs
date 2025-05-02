@@ -40,7 +40,6 @@ public class InimigoPai : MonoBehaviour
                 Destroy(gameObject);
                 Instantiate(explosão, transform.position, transform.rotation);
                 var gerador = FindFirstObjectByType<GeradorInimigos>();
-                //gerador.DiminuiQuantidade();
                 gerador.GanhaPontos(pontos);
                 //Dropando powerup
                 CriaItem();
@@ -52,7 +51,12 @@ public class InimigoPai : MonoBehaviour
     private void OnDestroy()
     {
         var gerador = FindFirstObjectByType<GeradorInimigos>();
-        gerador.DiminuiQuantidade();
+        //Só executa o código se o gerador existe
+        if (gerador)
+        {
+            gerador.DiminuiQuantidade();
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,8 +64,6 @@ public class InimigoPai : MonoBehaviour
         if (collision.CompareTag("BulletDestroyer"))
         {
             Destroy(gameObject);
-            //var gerador = FindFirstObjectByType<GeradorInimigos>();
-            //gerador.DiminuiQuantidade();
         }
 
     }
@@ -78,7 +80,6 @@ public class InimigoPai : MonoBehaviour
 
             //Dando pontos
             var gerador = FindFirstObjectByType<GeradorInimigos>();
-            //gerador.DiminuiQuantidade();
             gerador.GanhaPontos(pontos);
 
             CriaItem();

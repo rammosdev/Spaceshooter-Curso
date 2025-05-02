@@ -38,8 +38,6 @@ public class GeradorInimigos : MonoBehaviour
         //Estou vendo se na posição tem algum colisor 2D
         Collider2D hit = Physics2D.OverlapBox(posicao, size, 0f);
 
-        Debug.Log(hit);
-
         if (hit != null)
         {
             return true;

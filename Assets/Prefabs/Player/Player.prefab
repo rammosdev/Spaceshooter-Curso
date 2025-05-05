@@ -129,11 +129,13 @@ MonoBehaviour:
   speed: 4
   vida: 999
   rb: {fileID: 171605264590430868}
+  shield: {fileID: 2189293743325439823, guid: 5a2f55e22d28b2448a1a9ba45bdd78c4, type: 3}
+  qntShield: 2
   bulletPos: {fileID: 3337887119124324175}
   explosao: {fileID: 1993195405524880793, guid: 15102160ca0f79b42aff303933de3b23, type: 3}
   meuTiro1: {fileID: 5433294271539276849, guid: e7121ac8935b55f4e848f4f0fe5b61dc, type: 3}
   meuTiro2: {fileID: 2390186391388106790, guid: 6766d99ed0d2d9f409b4b5a333ad998c, type: 3}
-  levelTiro: 3
+  levelTiro: 1
   bulletSpeed: 10
   xLimite: 8.3
   yLimite: 4.4

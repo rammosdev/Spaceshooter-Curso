@@ -64,6 +64,7 @@ public class InimigoPai : MonoBehaviour
         if (collision.CompareTag("BulletDestroyer"))
         {
             Destroy(gameObject);
+            Instantiate(explosão, transform.position, transform.rotation);
         }
 
     }

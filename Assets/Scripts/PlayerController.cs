@@ -6,6 +6,11 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public int vida;
     public Rigidbody2D rb;
+    public GameObject shield;
+    private GameObject shieldAtual;
+    private bool haveShield = false;
+    private float shieldTimer = 0f;
+    public int qntShield = 3;
     [Header("Tiro")]
     public GameObject bulletPos;
     public GameObject explosao;
@@ -27,6 +32,8 @@ public class PlayerController : MonoBehaviour
     {
         Movimentação();
         Atirando();
+        Escudo();
+        Debug.Log(haveShield);
     }
 
     public void Movimentação()
@@ -73,6 +80,33 @@ public class PlayerController : MonoBehaviour
                     break;
             }
     }
+        
+    }
+
+    public void Escudo()
+    {
+        if (Input.GetButtonDown("Shield") && (!haveShield) && qntShield > 0)
+        {
+            shieldAtual = Instantiate(shield, transform.position, transform.rotation);
+            haveShield = true;
+            qntShield--;
+        }
+        if (shieldAtual)
+        {
+            shieldAtual.transform.position = transform.position;
+            //Se eu tenho um escudo, começo a contar o tempo
+            shieldTimer += Time.deltaTime;
+
+
+            //Se já se passaram 6 segundos, então eu destruo o escudo
+            if (shieldTimer >= 6.2f)
+            {
+                haveShield = false;
+                Destroy(shieldAtual);
+                shieldTimer = 0;
+            }
+            
+        }
         
     }
 

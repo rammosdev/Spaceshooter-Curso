@@ -46,8 +46,10 @@ public class GeradorInimigos : MonoBehaviour
         //Instanciando a animação do boss
         if (!animationCheck && spawnWait <= 0)
         {
-            Instantiate(bossAnimation, Vector3.zero, transform.rotation);
+            GameObject animBoss = Instantiate(bossAnimation, Vector3.zero, transform.rotation);
+            //Destruindo a animação do boss em
             animationCheck = true;
+            Destroy(animBoss,6f);
         }
         
     }

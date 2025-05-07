@@ -51,6 +51,9 @@ TagManager:
   - name: Inimigos
     uniqueID: 3995986753
     locked: 0
+  - name: Boss
+    uniqueID: 4061600091
+    locked: 0
   - name: Player
     uniqueID: 4258371229
     locked: 0

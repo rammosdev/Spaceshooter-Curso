@@ -59,14 +59,14 @@ public class InimigoController2 : InimigoPai
             //Checando de que lado estou
             if (transform.position.x >= 0 && isMove)
             {
-                Debug.Log("Estou na direita");
+                
                 rb.linearVelocity = new Vector2(-speed, -speed);
                 isMove = false;
                
             }
             else if (isMove)
             {
-                Debug.Log("Estou na esquerda");
+                
                 rb.linearVelocity = new Vector2(speed, -speed);
                 isMove = false;
 

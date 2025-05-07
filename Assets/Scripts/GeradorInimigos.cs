@@ -5,6 +5,8 @@ public class GeradorInimigos : MonoBehaviour
 {
     [SerializeField] private GameObject[] inimigos;
     [SerializeField] private int qtdInimigo = 0;
+    [SerializeField] private GameObject bossAnimation;
+    private bool animationCheck;
     [Header("Pontuação")]
     [SerializeField]private int pontos;
     [SerializeField]private int level = 1;
@@ -24,7 +26,30 @@ public class GeradorInimigos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GeraInimigos();
+        if (level <10)
+        {
+            GeraInimigos();
+        }else
+        {
+            GeraBoss();
+        }
+        
+    }
+
+    private void GeraBoss()
+    {
+
+        if (qtdInimigo <= 0 && spawnWait > 0)
+        {
+            spawnWait -= Time.deltaTime;
+        }
+        //Instanciando a animação do boss
+        if (!animationCheck && spawnWait <= 0)
+        {
+            Instantiate(bossAnimation, Vector3.zero, transform.rotation);
+            animationCheck = true;
+        }
+        
     }
 
     public void DiminuiQuantidade()

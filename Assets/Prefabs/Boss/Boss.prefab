@@ -115,13 +115,16 @@ MonoBehaviour:
   bulletPos: {fileID: 0}
   bulletSpeed: -5
   estado: estado1
-  direita: 1
   limiteH: 6
   posicaoTiro1: {fileID: 6526343199293856732}
   posicaoTiro2: {fileID: 1763443423224485403}
   posicaoTiro3: {fileID: 4702593961349682679}
   tiro1: {fileID: 8982737493227629144, guid: 40789f12b62bd7140884abddcc220427, type: 3}
-  tiro2: {fileID: 4035015068998463631, guid: cabd43b25caa5744996aaba946afc471, type: 3}
+  estados:
+  - estado1
+  - estado2
+  - estado3
+  esperaEstado: 10
 --- !u!95 &6788986977365929765
 Animator:
   serializedVersion: 7
@@ -183,7 +186,7 @@ GameObject:
   m_Layer: 6
   m_Name: "Posi\xE7\xE3oTiro2"
   m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -214,7 +217,7 @@ GameObject:
   m_Layer: 6
   m_Name: "Posi\xE7\xE3oTiro1"
   m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -245,7 +248,7 @@ GameObject:
   m_Layer: 6
   m_Name: "Posi\xE7\xE3oTiro3"
   m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

@@ -4,7 +4,7 @@ public class BossController : InimigoPai
 {
     [SerializeField] private string estado = "estado1";
     private Rigidbody2D rb;
-    [SerializeField] private bool direita;
+    private bool direita;
     [SerializeField] private float limiteH;
 
     [Header("Tiros")]
@@ -12,9 +12,9 @@ public class BossController : InimigoPai
     [SerializeField] private Transform posicaoTiro2;
     [SerializeField] private Transform posicaoTiro3;
     [SerializeField] private GameObject tiro1;
-    [SerializeField] private GameObject tiro2;
-    [SerializeField] private float delayTiro = 1f;
-    [SerializeField] private float waitShoot2;
+     private GameObject tiro2;
+     private float delayTiro = 1f;
+     private float waitShoot2;
     [SerializeField] private string[] estados;
     [SerializeField] private float esperaEstado = 10f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

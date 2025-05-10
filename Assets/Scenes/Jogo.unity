@@ -600,7 +600,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1842065435832074921, guid: f1bb02b17ba2076459ea0e1684108009, type: 3}
       propertyPath: levelTiro
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2374357682841146517, guid: f1bb02b17ba2076459ea0e1684108009, type: 3}
       propertyPath: m_Name

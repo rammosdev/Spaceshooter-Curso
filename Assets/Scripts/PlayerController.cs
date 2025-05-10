@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public GameObject meuTiro2;
     [SerializeField] private int levelTiro;
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private float waitShoot;
+    [SerializeField] private float delayShoot = 0.5f;
 
     [SerializeField] private float xLimite;
     [SerializeField] private float yLimite;
@@ -56,19 +58,22 @@ public class PlayerController : MonoBehaviour
 
     public void Atirando()
     {
-        if (Input.GetButtonDown("Fire1"))
+        waitShoot -= Time.deltaTime;
+        if (Input.GetButton("Fire1") && waitShoot <= 0f)
         {
             switch (levelTiro)
             {
                case 1:
 
                     CriaTiro(meuTiro1, bulletPos.transform.position);
+                    waitShoot = delayShoot;
                    break;
                 case 2:
                     Vector3 posicao = new Vector3(transform.position.x - 0.45f, transform.position.y + 0.1f, 0f);
                     CriaTiro(meuTiro2, posicao);
                     posicao = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
                     CriaTiro(meuTiro2, posicao);
+                    waitShoot = delayShoot;
                     break;
                 case 3:
                     CriaTiro(meuTiro1, bulletPos.transform.position);
@@ -76,6 +81,7 @@ public class PlayerController : MonoBehaviour
                     CriaTiro(meuTiro2, posicao);
                     posicao = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
                     CriaTiro(meuTiro2, posicao);
+                    waitShoot = delayShoot;
                     break;
             }
     }

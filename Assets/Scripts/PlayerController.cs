@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
         Movimentação();
         Atirando();
         Escudo();
-        Debug.Log(haveShield);
     }
 
     public void Movimentação()

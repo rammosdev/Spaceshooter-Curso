@@ -14,6 +14,8 @@ public class BossController : InimigoPai
     [SerializeField] private Transform posicaoTiro3;
     [SerializeField] private GameObject tiro1;
     [SerializeField] private GameObject tiro2;
+    [SerializeField] private float delayTiro = 1f;
+    [SerializeField] private float waitShoot2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,22 +29,25 @@ public class BossController : InimigoPai
         {
             case "estado1":
                 Estado1();
-                Tiro1();
                 break;
             case "estado2":
-                Tiro2();
+                Estado2();
                 break;
             case "estado3":
-                Debug.Log("Estou no terceiro estado");
+                Estado3();
                 break;
         }
     }
 
     private void Estado1()
     {
+        waitShoot -= Time.deltaTime;
+        if (waitShoot < 0)
+        {
+            Tiro1();
+            waitShoot = delayTiro;
+        }
         //Indo para direita e esquerda
-
-
         if (direita)
         {
             rb.linearVelocity = new Vector2(speed, 0f);
@@ -60,44 +65,64 @@ public class BossController : InimigoPai
         {
             direita = true;
         }
+
     }
 
     private void Tiro1()
     {
-        waitShoot -= Time.deltaTime;
-        if (waitShoot <= 0)
-        {
-            GameObject tiroUm = Instantiate(tiro1, posicaoTiro1.position, transform.rotation);
-            GameObject tiroDois = Instantiate(tiro1, posicaoTiro2.position, transform.rotation);
+        GameObject tiroUm = Instantiate(tiro1, posicaoTiro1.position, transform.rotation);
+        GameObject tiroDois = Instantiate(tiro1, posicaoTiro2.position, transform.rotation);
 
-            tiroUm.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
-            tiroDois.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
-            waitShoot = 1;
-        }
-
+        tiroUm.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
+        tiroDois.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
     }
 
-    private void Tiro2()
+    private void Estado2()
     {
         waitShoot -= Time.deltaTime;
         if (waitShoot <= 0)
         {
-            //Encontrando o player na cena
-            var player = FindFirstObjectByType<PlayerController>();
-            if (player)
-            {
-                GameObject tiro = Instantiate(tiro2, posicaoTiro3.position, transform.rotation);
-                //Encontrando o valor da direção
-                Vector2 direcao = player.transform.position - tiro.transform.position;
-                direcao.Normalize();
-                //Dando a direção do tiro
-                tiro.GetComponent<Rigidbody2D>().linearVelocity = direcao * -bulletSpeed;
-                //Dando o ângulo certo do tiro
-                float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
-                //Passando o angulo
-                tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f);
-                waitShoot = 0.5f;
-            }
+            Tiro2();
+            waitShoot = delayTiro / 2;
         }
+    }
+    private void Tiro2()
+    {
+        //Encontrando o player na cena
+        var player = FindFirstObjectByType<PlayerController>();
+        if (player)
+        {
+            GameObject tiro = Instantiate(tiro2, posicaoTiro3.position, transform.rotation);
+            //Encontrando o valor da direção
+            Vector2 direcao = player.transform.position - tiro.transform.position;
+            direcao.Normalize();
+            //Dando a direção do tiro
+            tiro.GetComponent<Rigidbody2D>().linearVelocity = direcao * -bulletSpeed;
+            //Dando o ângulo certo do tiro
+            float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+            //Passando o angulo
+            tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f);
+            waitShoot = 0.5f;
+        }
+    }
+
+    private void Estado3()
+    {
+        //Tiro1
+        waitShoot -= Time.deltaTime;
+        if (waitShoot < 0)
+        {
+            Tiro1();
+            waitShoot = delayTiro;
+        }
+
+        //Tiro2
+        waitShoot2 -= Time.deltaTime;
+        if (waitShoot2 <= 0)
+        {
+            Tiro2();
+            waitShoot2 = delayTiro;
+        }
+
     }
 }

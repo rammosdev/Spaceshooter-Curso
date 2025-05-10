@@ -31,7 +31,7 @@ public class InimigoController : InimigoPai
         bool visivel = sprite.isVisible;
         if (visivel == true)
         {
-            //Diminuindo a espera pelo deltaTime
+            //Diminuindo a espera pelo deltaTimef
             waitShoot -= Time.deltaTime;
             if (waitShoot <= 0)
             {

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class BossController : InimigoPai
@@ -16,6 +15,8 @@ public class BossController : InimigoPai
     [SerializeField] private GameObject tiro2;
     [SerializeField] private float delayTiro = 1f;
     [SerializeField] private float waitShoot2;
+    [SerializeField] private string[] estados;
+    [SerializeField] private float esperaEstado = 10f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +26,7 @@ public class BossController : InimigoPai
     // Update is called once per frame
     void Update()
     {
+        TrocaEstado();
         switch (estado)
         {
             case "estado1":
@@ -79,6 +81,7 @@ public class BossController : InimigoPai
 
     private void Estado2()
     {
+        rb.linearVelocity = Vector3.zero;
         waitShoot -= Time.deltaTime;
         if (waitShoot <= 0)
         {
@@ -108,6 +111,7 @@ public class BossController : InimigoPai
 
     private void Estado3()
     {
+        rb.linearVelocity = Vector3.zero;
         //Tiro1
         waitShoot -= Time.deltaTime;
         if (waitShoot < 0)
@@ -124,5 +128,20 @@ public class BossController : InimigoPai
             waitShoot2 = delayTiro;
         }
 
+    }
+
+    private void TrocaEstado()
+    {
+        if (esperaEstado <= 0f)
+        {
+            //Escolhendo novo estado
+            //Escolhendo um valor aleatório de estado
+            int indiceEstado = Random.Range(0, estados.Length);
+            estado = estados[indiceEstado];
+            esperaEstado = 10f;
+        }else
+        {
+            esperaEstado -= Time.deltaTime;
+        }
     }
 }

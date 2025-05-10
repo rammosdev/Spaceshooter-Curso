@@ -127,9 +127,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 128720396389107920, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
+      propertyPath: estado
+      value: estado3
+      objectReference: {fileID: 0}
+    - target: {fileID: 128720396389107920, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
+      propertyPath: waitShoot2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 128720396389107920, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
+      propertyPath: esperaEstado
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 128720396389107920, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
+      propertyPath: estados.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 128720396389107920, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
+      propertyPath: 'estados.Array.data[0]'
+      value: estado1
+      objectReference: {fileID: 0}
+    - target: {fileID: 128720396389107920, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
+      propertyPath: 'estados.Array.data[1]'
+      value: estado2
+      objectReference: {fileID: 0}
+    - target: {fileID: 128720396389107920, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
+      propertyPath: 'estados.Array.data[2]'
+      value: estado3
+      objectReference: {fileID: 0}
     - target: {fileID: 2334717189915197181, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968339386010442944, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397279875300808201, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104718765152537244, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
+      propertyPath: m_Icon
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7522836047199790611, guid: 7290bb8ae410f954a865f3146a8e6ca4, type: 3}
       propertyPath: m_LocalPosition.x

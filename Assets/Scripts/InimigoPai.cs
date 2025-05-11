@@ -39,10 +39,20 @@ public class InimigoPai : MonoBehaviour
             {
                 Destroy(gameObject);
                 Instantiate(explosão, transform.position, transform.rotation);
+
+                if (powerUp)
+                {
+                    //Dropando powerup
+                    CriaItem();
+                }
+                
                 var gerador = FindFirstObjectByType<GeradorInimigos>();
-                gerador.GanhaPontos(pontos);
-                //Dropando powerup
-                CriaItem();
+                if (gerador)
+                {
+                    gerador.GanhaPontos(pontos);
+                }
+                
+                
                 
             }
         }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 128720396389107920}
   - component: {fileID: 6788986977365929765}
   - component: {fileID: 494047963471692407}
+  - component: {fileID: 7022457399109881438}
   m_Layer: 6
   m_Name: Boss
   m_TagString: Inimigo
@@ -79,8 +80,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -233367205
-  m_SortingLayer: 3
+  m_SortingLayerID: -298980543
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -3648714946359583874, guid: c97da9dc0692e5d45bf2dc00cc8d6be8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -106,11 +107,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
-  vida: 0
-  pontos: 0
+  vida: 3
+  pontos: 200
   powerUp: {fileID: 0}
   itemRate: 0
-  "explos\xE3o": {fileID: 0}
+  "explos\xE3o": {fileID: 1479813416212965205, guid: 16faeb916d21da94285762dd6e016ffc, type: 3}
   bullet: {fileID: 0}
   bulletPos: {fileID: 0}
   bulletSpeed: -5
@@ -174,6 +175,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!61 &7022457399109881438
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334717189915197181}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.77107906}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.64, y: 4.32}
+    newSize: {x: 5.64, y: 4.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.64, y: 2.7778425}
+  m_EdgeRadius: 0
 --- !u!1 &2968339386010442944
 GameObject:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ public class GeradorInimigos : MonoBehaviour
             GameObject animBoss = Instantiate(bossAnimation, Vector3.zero, transform.rotation);
             //Destruindo a animação do boss em
             animationCheck = true;
-            Destroy(animBoss,6f);
+            
         }
         
     }

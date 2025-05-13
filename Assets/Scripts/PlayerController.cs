@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,10 +25,12 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float xLimite;
     [SerializeField] private float yLimite;
+    [Header("UI")]
+    [SerializeField] private TextMeshProUGUI vidaTexto;
 
     void Start()
     {
-        
+        vidaTexto.text = vida.ToString();
     }
 
     // Update is called once per frame
@@ -125,6 +129,9 @@ public class PlayerController : MonoBehaviour
 
     public void PerdeVida(int dano)
     {
+
+        //Atualizando a vida na UI
+        vidaTexto.text = vida.ToString();
         vida -= dano;
         if (vida <= 0)
         {

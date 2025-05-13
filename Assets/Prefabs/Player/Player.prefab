@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -36596067
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 4334783836991956000, guid: b0dbd11d6194a3e4f894c989e367c559, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  vida: 999
+  vida: 3
   rb: {fileID: 171605264590430868}
   shield: {fileID: 2189293743325439823, guid: 5a2f55e22d28b2448a1a9ba45bdd78c4, type: 3}
   qntShield: 2
@@ -135,10 +135,16 @@ MonoBehaviour:
   explosao: {fileID: 1993195405524880793, guid: 15102160ca0f79b42aff303933de3b23, type: 3}
   meuTiro1: {fileID: 5433294271539276849, guid: e7121ac8935b55f4e848f4f0fe5b61dc, type: 3}
   meuTiro2: {fileID: 2390186391388106790, guid: 6766d99ed0d2d9f409b4b5a333ad998c, type: 3}
-  levelTiro: 1
+  levelTiro: 3
   bulletSpeed: 10
+  waitShoot: 0
+  delayShoot: 0.5
   xLimite: 8.3
   yLimite: 4.4
+  vidaTexto: {fileID: 0}
+  shields:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!50 &171605264590430868
 Rigidbody2D:
   serializedVersion: 5

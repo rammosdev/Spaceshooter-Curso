@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float yLimite;
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI vidaTexto;
+    [SerializeField] private Image[] shields;
 
     void Start()
     {
@@ -99,6 +100,8 @@ public class PlayerController : MonoBehaviour
             shieldAtual = Instantiate(shield, transform.position, transform.rotation);
             haveShield = true;
             qntShield--;
+            shields[qntShield].enabled = false;
+            
         }
         if (shieldAtual)
         {
@@ -131,8 +134,9 @@ public class PlayerController : MonoBehaviour
     {
 
         //Atualizando a vida na UI
-        vidaTexto.text = vida.ToString();
+        
         vida -= dano;
+        vidaTexto.text = vida.ToString();
         if (vida <= 0)
         {
             Destroy(gameObject);

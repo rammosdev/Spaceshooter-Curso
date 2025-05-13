@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -18,6 +19,7 @@ public class InimigoPai : MonoBehaviour
     [SerializeField]protected GameObject bulletPos;
     [SerializeField]protected float bulletSpeed;
     protected float waitShoot = 1f;
+    
     void Start()
     {
         

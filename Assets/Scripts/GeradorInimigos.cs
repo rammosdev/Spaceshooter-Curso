@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -14,8 +15,11 @@ public class GeradorInimigos : MonoBehaviour
     [Header("Timer")]
     [SerializeField] private float timeToSpawn;
     [SerializeField] private float spawnWait;
+    [Header("UI")] 
+    [SerializeField]protected TextMeshProUGUI pontosTexto;
 
-    
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -130,6 +134,8 @@ public class GeradorInimigos : MonoBehaviour
     public void GanhaPontos(int pontos)
     {
         this.pontos += pontos;
+
+        pontosTexto.text = pontos.ToString();
         //Ganhando level se os pontos forem maior que a baseLevel * level
         if (this.pontos > baseLevel * level)
         {

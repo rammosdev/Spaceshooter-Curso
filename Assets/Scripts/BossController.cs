@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossController : InimigoPai
 {
@@ -6,6 +7,7 @@ public class BossController : InimigoPai
     private Rigidbody2D rb;
     private bool direita;
     [SerializeField] private float limiteH;
+    [SerializeField] private int maxHealth;
 
     [Header("Tiros")]
     [SerializeField] private Transform posicaoTiro1;
@@ -17,10 +19,14 @@ public class BossController : InimigoPai
      private float waitShoot2;
     [SerializeField] private string[] estados;
     [SerializeField] private float esperaEstado = 10f;
+    [Header("Interface")]
+    [SerializeField] private Image healthBar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        vida = maxHealth;
     }
 
     // Update is called once per frame
@@ -39,6 +45,10 @@ public class BossController : InimigoPai
                 Estado3();
                 break;
         }
+        //Garantir que a divisão vai retornar um float
+        healthBar.fillAmount = ((float) vida / (float) maxHealth);
+
+
     }
 
     private void Estado1()

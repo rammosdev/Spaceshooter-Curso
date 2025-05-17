@@ -3,8 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private static GameManager instance;
     private void Awake()
     {
+        //Garantindo que só existe 1 gameManager por vez
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
         //Não destruir quando ele mudar de cena
         DontDestroyOnLoad(gameObject);
     }

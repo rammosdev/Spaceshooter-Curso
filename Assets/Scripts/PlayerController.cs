@@ -141,8 +141,18 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
             Instantiate(explosao, transform.position, transform.rotation);
+            //Carregando a cena inicial do jogo
+            //Achando o game manager
+            var gameManager = FindAnyObjectByType<GameManager>();
+            //Rodando o método de iniciar o jogo
+            if (gameManager)
+            {
+                gameManager.Inicio();
+            }
         }
-        Debug.Log(vida);
+        
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

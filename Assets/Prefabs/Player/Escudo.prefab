@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5020905277784493786}
   - component: {fileID: 6554969018220514464}
   - component: {fileID: 1083870689768750531}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Escudo
   m_TagString: BulletDestroyer
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -36596067
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1ef577747d3a3a54fb75d6eab5633a7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

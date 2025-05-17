@@ -73,7 +73,7 @@ public class InimigoPai : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("BulletDestroyer"))
+        if (collision.gameObject.layer == 12)
         {
             Destroy(gameObject);
             Instantiate(explosão, transform.position, transform.rotation);

@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GeradorInimigos : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class GeradorInimigos : MonoBehaviour
     [SerializeField] private float timeToSpawn;
     [SerializeField] private float spawnWait;
     [Header("UI")] 
-    [SerializeField]protected TextMeshProUGUI pontosTexto;
+    [SerializeField]private TextMeshProUGUI pontosTexto;
 
 
 
@@ -131,9 +132,10 @@ public class GeradorInimigos : MonoBehaviour
         }
     }
 
-    public void GanhaPontos(int pontos)
+    public void GanhaPontos(int pontoss)
     {
-        this.pontos += pontos;
+        this.pontos += pontoss;
+        Debug.Log(pontos);
 
         pontosTexto.text = pontos.ToString();
         //Ganhando level se os pontos forem maior que a baseLevel * level

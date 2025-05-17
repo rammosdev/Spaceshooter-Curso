@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7990477536462474304}
   - component: {fileID: 1918682617285243377}
   - component: {fileID: 3572820372399347916}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6788986977365929765}
   - component: {fileID: 494047963471692407}
   - component: {fileID: 7022457399109881438}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Boss
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 841685710265969474}
   - component: {fileID: 4497651522320082462}
   - component: {fileID: 2742826931650900980}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1763443423224485403}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: "Posi\xE7\xE3oTiro2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1883883057606243165}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6526343199293856732}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: "Posi\xE7\xE3oTiro1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4702593961349682679}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: "Posi\xE7\xE3oTiro3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 5357697098057218860}
   - component: {fileID: 4194569477987886876}
   - component: {fileID: 8143631292938974868}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Canvas Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 3948332605467563960}
   - component: {fileID: 3704469630168437533}
   - component: {fileID: 1122217668319181851}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

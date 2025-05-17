@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5020905277784493786}
   - component: {fileID: 6554969018220514464}
   - component: {fileID: 1083870689768750531}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Escudo
   m_TagString: BulletDestroyer
   m_Icon: {fileID: 0}

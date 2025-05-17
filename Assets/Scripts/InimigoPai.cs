@@ -83,7 +83,7 @@ public class InimigoPai : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.layer == 13)
         {
             Destroy(gameObject);
             Instantiate(explosão, transform.position, transform.rotation);

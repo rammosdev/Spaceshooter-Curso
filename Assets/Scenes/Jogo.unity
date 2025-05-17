@@ -200,6 +200,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69212c63eeb88f34b838331f7129d445, type: 3}
+--- !u!114 &488788452 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2568531261781002848, guid: bc1d752abb3cf4345bd72304cc94e3fa, type: 3}
+  m_PrefabInstance: {fileID: 7510081825095975618}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +657,10 @@ PrefabInstance:
       propertyPath: 'shields.Array.data[1]'
       value: 
       objectReference: {fileID: 2130473404}
+    - target: {fileID: 1842065435832074921, guid: f1bb02b17ba2076459ea0e1684108009, type: 3}
+      propertyPath: 'shields.Array.data[2]'
+      value: 
+      objectReference: {fileID: 488788452}
     - target: {fileID: 2374357682841146517, guid: f1bb02b17ba2076459ea0e1684108009, type: 3}
       propertyPath: m_Name
       value: Player

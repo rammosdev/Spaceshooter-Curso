@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,9 +30,18 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    //Criando um método que roda depois de um certo tempo
+    IEnumerator firstScene()
+    {
+        yield return new WaitForSeconds(2f);
+        //Tódo código abaixo daqui vai esperar 2s para poder rodar
+        SceneManager.LoadScene(0);
+    }
+
     public void Inicio()
     {
-        SceneManager.LoadScene(0);
+        //Iniciando a minha corotina
+        StartCoroutine(firstScene());
     }
 
     public void Sair()

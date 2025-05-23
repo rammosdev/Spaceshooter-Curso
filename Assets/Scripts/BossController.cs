@@ -15,7 +15,7 @@ public class BossController : InimigoPai
     [SerializeField] private Transform posicaoTiro3;
     [SerializeField] private GameObject tiro1;
     [SerializeField] private GameObject tiro2;
-     private float delayTiro = 1f;
+    [SerializeField] private float delayTiro = 1f;
      private float waitShoot2;
     [SerializeField] private string[] estados;
     [SerializeField] private float esperaEstado = 10f;
@@ -47,6 +47,7 @@ public class BossController : InimigoPai
         }
         //Garantir que a divisão vai retornar um float
         healthBar.fillAmount = ((float) vida / (float) maxHealth);
+        AumentaDificuldade();
     }
 
     private void Estado1()
@@ -134,6 +135,16 @@ public class BossController : InimigoPai
         {
             Tiro2();
             waitShoot2 = delayTiro;
+        }
+
+    }
+
+    private void AumentaDificuldade()
+    {
+        //Checando se minha vida é menor ou igual do que a metade da vida
+        if (vida <= maxHealth/2)
+        {
+            delayTiro = 0.5f;
         }
 
     }

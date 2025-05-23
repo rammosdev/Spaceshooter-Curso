@@ -111,7 +111,7 @@ public class InimigoPai : MonoBehaviour
             GameObject pUP = Instantiate(powerUp, transform.position, transform.rotation);
 
             //Mandando o powerUP ser destruído em três segundos
-            Destroy(pUP, 3f);
+            Destroy(pUP, 5.3f);
 
             Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
             pUP.GetComponent<Rigidbody2D>().linearVelocity = dir;

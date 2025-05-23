@@ -22,4 +22,15 @@ public class BossAnimation : MonoBehaviour
         var meuPai = transform.parent.gameObject;
         Destroy(meuPai);
     }
+
+    //Criando o método de ir para a tela inicial
+    public void EndGame()
+    {
+        var gameManager = FindAnyObjectByType<GameManager>();
+        if (gameManager)
+        {
+            gameManager.Inicio();
+        }
+        
+    }
 }

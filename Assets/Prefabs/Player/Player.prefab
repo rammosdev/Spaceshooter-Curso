@@ -127,10 +127,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  vida: 3
+  vida: 5
   rb: {fileID: 171605264590430868}
   shield: {fileID: 2189293743325439823, guid: 5a2f55e22d28b2448a1a9ba45bdd78c4, type: 3}
-  qntShield: 3
+  qntShield: 5
   shieldSound: {fileID: 8300000, guid: 1121f7c29942c4545995294f80181037, type: 3}
   shieldSoundDown: {fileID: 8300000, guid: 5f16b6a99ecab7e40ace36cb9d2805c0, type: 3}
   bulletPos: {fileID: 3337887119124324175}
@@ -147,6 +147,8 @@ MonoBehaviour:
   yLimite: 4.4
   vidaTexto: {fileID: 0}
   shields:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

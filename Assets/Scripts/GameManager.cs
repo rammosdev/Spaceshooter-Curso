@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
+
     private void Awake()
     {
         //Garantindo que só existe 1 gameManager por vez
@@ -16,6 +17,10 @@ public class GameManager : MonoBehaviour
         instance = this;
         //Não destruir quando ele mudar de cena
         DontDestroyOnLoad(gameObject);
+    }
+    public void Start()
+    {
+        
     }
     // Update is called once per frame
     void Update()
@@ -49,4 +54,6 @@ public class GameManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Fechei");
     }
+
+
 }

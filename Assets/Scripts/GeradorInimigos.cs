@@ -134,14 +134,16 @@ public class GeradorInimigos : MonoBehaviour
 
     public void GanhaPontos(int pontoss)
     {
-        this.pontos += pontoss;
-        Debug.Log(pontos);
+        //Vou ganhar pontos com base no level do jogo
+        this.pontos += pontoss * level;
 
         pontosTexto.text = pontos.ToString();
         //Ganhando level se os pontos forem maior que a baseLevel * level
-        if (this.pontos > baseLevel * level)
+        if (this.pontos > baseLevel)
         {
             level++;
+            //Dobrando a quantidade de pontos necessário
+            baseLevel *= 2;
         }
     }
 }

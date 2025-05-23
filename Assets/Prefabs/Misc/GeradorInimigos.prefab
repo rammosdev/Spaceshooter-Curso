@@ -51,7 +51,7 @@ MonoBehaviour:
   bossAnimation: {fileID: 3660108656314093292, guid: 50a46f52a79f2a84fb45fa34b3a2ab22, type: 3}
   pontos: 0
   level: 1
-  baseLevel: 1
+  baseLevel: 100
   timeToSpawn: 2
   spawnWait: 0
   pontosTexto: {fileID: 0}

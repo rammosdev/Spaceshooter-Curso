@@ -738,6 +738,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1340156015638680706, guid: bc1d752abb3cf4345bd72304cc94e3fa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340156015638680706, guid: bc1d752abb3cf4345bd72304cc94e3fa, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340156015638680706, guid: bc1d752abb3cf4345bd72304cc94e3fa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340156015638680706, guid: bc1d752abb3cf4345bd72304cc94e3fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2811023176447133453, guid: bc1d752abb3cf4345bd72304cc94e3fa, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -911,6 +927,10 @@ PrefabInstance:
     - target: {fileID: 1049313952252358342, guid: a0754cf2178ad9548ba4d3a4db27c9f0, type: 3}
       propertyPath: m_Name
       value: GeradorInimigos
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049313952252358342, guid: a0754cf2178ad9548ba4d3a4db27c9f0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1800874951521438013, guid: a0754cf2178ad9548ba4d3a4db27c9f0, type: 3}
       propertyPath: pontosTexto

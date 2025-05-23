@@ -30,7 +30,6 @@ public class TiroController : MonoBehaviour
             {
                 collision.GetComponent<PlayerController>().PerdeVida(1);
             }
-
         Destroy(gameObject);
         Instantiate(ImpactoTiro, transform.position, transform.rotation);
     }

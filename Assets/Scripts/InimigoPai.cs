@@ -73,7 +73,7 @@ public class InimigoPai : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 12)
+        if (collision.gameObject.layer == 12 || collision.gameObject.layer == 13)
         {
             Destroy(gameObject);
             Instantiate(explosão, transform.position, transform.rotation);
@@ -83,7 +83,7 @@ public class InimigoPai : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.layer == 13)
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
             Instantiate(explosão, transform.position, transform.rotation);

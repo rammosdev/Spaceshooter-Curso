@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481e558c230043c4c8902a34aaee61e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   vida: 3
   rb: {fileID: 171605264590430868}
   shield: {fileID: 2189293743325439823, guid: 5a2f55e22d28b2448a1a9ba45bdd78c4, type: 3}

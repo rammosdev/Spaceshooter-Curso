@@ -19,6 +19,9 @@ public class GeradorInimigos : MonoBehaviour
     [Header("UI")] 
     [SerializeField]private TextMeshProUGUI pontosTexto;
 
+    [SerializeField] private AudioClip musicaBoss;
+    [SerializeField] private AudioSource musica;
+
 
 
 
@@ -54,6 +57,10 @@ public class GeradorInimigos : MonoBehaviour
             GameObject animBoss = Instantiate(bossAnimation, Vector3.zero, transform.rotation);
             //Destruindo a animação do boss em
             animationCheck = true;
+
+            //Parando de tocar a música antiga e começando a tocar a música do boss
+            musica.clip = musicaBoss;
+            musica.Play();
             
         }
         

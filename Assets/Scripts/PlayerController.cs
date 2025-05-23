@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private bool haveShield = false;
     private float shieldTimer = 0f;
     public int qntShield = 3;
+    [SerializeField] private AudioClip shieldSound;
+    [SerializeField] private AudioClip shieldSoundDown;
     [Header("Tiro")]
     public GameObject bulletPos;
     public GameObject explosao;
@@ -109,6 +111,7 @@ public class PlayerController : MonoBehaviour
             haveShield = true;
             qntShield--;
             shields[qntShield].enabled = false;
+            AudioSource.PlayClipAtPoint(shieldSound, Vector3.zero);
             
         }
         if (shieldAtual)
@@ -124,6 +127,7 @@ public class PlayerController : MonoBehaviour
                 haveShield = false;
                 Destroy(shieldAtual);
                 shieldTimer = 0;
+                AudioSource.PlayClipAtPoint(shieldSoundDown, Vector3.zero);
             }
             
         }

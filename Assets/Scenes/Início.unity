@@ -982,6 +982,14 @@ PrefabInstance:
       value: GeradorInimigos
       objectReference: {fileID: 0}
     - target: {fileID: 1800874951521438013, guid: a0754cf2178ad9548ba4d3a4db27c9f0, type: 3}
+      propertyPath: level
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800874951521438013, guid: a0754cf2178ad9548ba4d3a4db27c9f0, type: 3}
+      propertyPath: baseLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800874951521438013, guid: a0754cf2178ad9548ba4d3a4db27c9f0, type: 3}
       propertyPath: pontosTexto
       value: 
       objectReference: {fileID: 313045162}

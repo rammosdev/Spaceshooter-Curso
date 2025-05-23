@@ -81,6 +81,7 @@ public class BossController : InimigoPai
 
     private void Tiro1()
     {
+        TocaTiro();
         GameObject tiroUm = Instantiate(tiro1, posicaoTiro1.position, transform.rotation);
         GameObject tiroDois = Instantiate(tiro1, posicaoTiro2.position, transform.rotation);
 
@@ -115,6 +116,7 @@ public class BossController : InimigoPai
             //Passando o angulo
             tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f);
             waitShoot = 0.5f;
+            TocaTiro2();
         }
     }
 

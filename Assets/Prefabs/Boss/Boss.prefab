@@ -191,6 +191,8 @@ MonoBehaviour:
   bullet: {fileID: 0}
   bulletPos: {fileID: 0}
   bulletSpeed: -5
+  somTiro: {fileID: 8300000, guid: 4ac4d4717c2ad734aa758b33387f5ec3, type: 3}
+  somTiro2: {fileID: 8300000, guid: fd36e8890c6fb8145825c541694cc610, type: 3}
   estado: estado1
   limiteH: 6
   maxHealth: 500

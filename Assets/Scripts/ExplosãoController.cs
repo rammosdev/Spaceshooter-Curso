@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class ExplosãoController : MonoBehaviour
 {
+    //Pegando o audioclipe
+    [SerializeField] private AudioClip meuSom;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //Tocando o audioclipe da explosão
+        AudioSource.PlayClipAtPoint(meuSom, Vector3.zero);
     }
 
     // Update is called once per frame

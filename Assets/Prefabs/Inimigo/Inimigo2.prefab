@@ -212,6 +212,7 @@ MonoBehaviour:
   bullet: {fileID: 4035015068998463631, guid: cabd43b25caa5744996aaba946afc471, type: 3}
   bulletPos: {fileID: 6452140695116044647}
   bulletSpeed: 4.5
+  somTiro: {fileID: 8300000, guid: fd36e8890c6fb8145825c541694cc610, type: 3}
   yMax: 2.5
 --- !u!1 &6452140695116044647
 GameObject:

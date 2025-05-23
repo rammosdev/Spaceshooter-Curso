@@ -135,6 +135,8 @@ MonoBehaviour:
   explosao: {fileID: 1993195405524880793, guid: 15102160ca0f79b42aff303933de3b23, type: 3}
   meuTiro1: {fileID: 5433294271539276849, guid: e7121ac8935b55f4e848f4f0fe5b61dc, type: 3}
   meuTiro2: {fileID: 2390186391388106790, guid: 6766d99ed0d2d9f409b4b5a333ad998c, type: 3}
+  tiroSom1: {fileID: 8300000, guid: 45f55e41ab5fa904fa8d585c8fe63dd2, type: 3}
+  tiroSom2: {fileID: 8300000, guid: 4ac4d4717c2ad734aa758b33387f5ec3, type: 3}
   levelTiro: 1
   bulletSpeed: 10
   waitShoot: 0

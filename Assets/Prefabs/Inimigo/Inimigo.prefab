@@ -186,6 +186,7 @@ MonoBehaviour:
   bullet: {fileID: 8982737493227629144, guid: 40789f12b62bd7140884abddcc220427, type: 3}
   bulletPos: {fileID: 4153474578375347624}
   bulletSpeed: -4.5
+  somTiro: {fileID: 8300000, guid: 4ac4d4717c2ad734aa758b33387f5ec3, type: 3}
 --- !u!95 &3275369066134377138
 Animator:
   serializedVersion: 7

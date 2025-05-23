@@ -19,7 +19,9 @@ public class InimigoPai : MonoBehaviour
     [SerializeField]protected GameObject bulletPos;
     [SerializeField]protected float bulletSpeed;
     protected float waitShoot = 1f;
-    
+    [SerializeField] protected AudioClip somTiro;
+    [SerializeField] protected AudioClip somTiro2;
+
     void Start()
     {
         
@@ -58,6 +60,15 @@ public class InimigoPai : MonoBehaviour
                 
             }
         }
+    }
+
+    public void TocaTiro()
+    {
+        AudioSource.PlayClipAtPoint(somTiro, Vector3.zero);
+    }
+    public void TocaTiro2()
+    {
+        AudioSource.PlayClipAtPoint(somTiro2, Vector3.zero);
     }
 
     private void OnDestroy()

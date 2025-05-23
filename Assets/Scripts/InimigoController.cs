@@ -7,6 +7,7 @@ public class InimigoController : InimigoPai
     [Header("Tiro")]
     private SpriteRenderer sprite;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,6 +39,7 @@ public class InimigoController : InimigoPai
                 GameObject tiro = Instantiate(bullet, bulletPos.transform.position, bulletPos.transform.rotation);
                 waitShoot = Random.Range(1.5f, 2f);
                 tiro.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, bulletSpeed);
+                TocaTiro();
                 
             }
         }

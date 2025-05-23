@@ -44,6 +44,7 @@ public class InimigoController2 : InimigoPai
                     float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
                     //Passando o angulo
                     tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f);
+                    TocaTiro();
 
                 }
             }

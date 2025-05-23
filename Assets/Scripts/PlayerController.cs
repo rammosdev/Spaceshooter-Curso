@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public GameObject explosao;
     public GameObject meuTiro1;
     public GameObject meuTiro2;
+    [SerializeField] private AudioClip tiroSom1;
+    [SerializeField] private AudioClip tiroSom2;
     [SerializeField] private int levelTiro;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float waitShoot;
@@ -72,21 +74,27 @@ public class PlayerController : MonoBehaviour
 
                     CriaTiro(meuTiro1, bulletPos.transform.position);
                     waitShoot = delayShoot;
-                   break;
+                    AudioSource.PlayClipAtPoint(tiroSom1, Vector3.zero);
+                    break;
                 case 2:
                     Vector3 posicao = new Vector3(transform.position.x - 0.45f, transform.position.y + 0.1f, 0f);
                     CriaTiro(meuTiro2, posicao);
                     posicao = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
                     CriaTiro(meuTiro2, posicao);
                     waitShoot = delayShoot;
+                    AudioSource.PlayClipAtPoint(tiroSom2, Vector3.zero);
                     break;
                 case 3:
                     CriaTiro(meuTiro1, bulletPos.transform.position);
                     posicao = new Vector3(transform.position.x - 0.45f, transform.position.y + 0.1f, 0f);
+                    AudioSource.PlayClipAtPoint(tiroSom1, Vector3.zero);
                     CriaTiro(meuTiro2, posicao);
                     posicao = new Vector3(transform.position.x + 0.45f, transform.position.y + 0.1f, 0f);
                     CriaTiro(meuTiro2, posicao);
+                    AudioSource.PlayClipAtPoint(tiroSom2, Vector3.zero);
                     waitShoot = delayShoot;
+                   
+                    
                     break;
             }
     }

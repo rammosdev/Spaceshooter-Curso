@@ -8,7 +8,7 @@ public class ExplosãoController : MonoBehaviour
     void Start()
     {
         //Tocando o audioclipe da explosão apenas se eu estou aparecendo na tela
-        if (transform.position.y > -5.5f || transform.position.y < 5f)
+        if (transform.position.y > -5.5f)
         {
             AudioSource.PlayClipAtPoint(meuSom, Vector3.zero);
         }

@@ -27,6 +27,9 @@ public class BossController : InimigoPai
         rb = GetComponent<Rigidbody2D>();
 
         vida = maxHealth;
+
+        //Pegando o canvas do boss -- Avisando qual é a camera
+        GetComponentInChildren<Canvas>().worldCamera = Camera.main;
     }
 
     // Update is called once per frame

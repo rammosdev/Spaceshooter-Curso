@@ -128,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   vida: 5
+  vidaMaxima: 5
   rb: {fileID: 171605264590430868}
   shield: {fileID: 2189293743325439823, guid: 5a2f55e22d28b2448a1a9ba45bdd78c4, type: 3}
   qntShield: 5

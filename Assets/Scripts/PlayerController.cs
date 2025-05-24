@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [Header("Atributos")]
     public float speed;
     public int vida;
+    public int vidaMaxima;
     public Rigidbody2D rb;
     public GameObject shield;
     private GameObject shieldAtual;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         vidaTexto.text = vida.ToString();
+        vida = vidaMaxima;
     }
 
     // Update is called once per frame
@@ -175,6 +177,10 @@ public class PlayerController : MonoBehaviour
             {
                 levelTiro++;
                 
+            }else if (levelTiro == 3 && vida < vidaMaxima)
+            {
+                vida += 1;
+                vidaTexto.text = vida.ToString();
             }
 
             Destroy(collision.gameObject);

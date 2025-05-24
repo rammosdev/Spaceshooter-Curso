@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3755195818297102645, guid: 69212c63eeb88f34b838331f7129d445, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.6
+      value: -9.12
       objectReference: {fileID: 0}
     - target: {fileID: 3755195818297102645, guid: 69212c63eeb88f34b838331f7129d445, type: 3}
       propertyPath: m_LocalPosition.z
@@ -799,7 +799,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 184944460053395814, guid: bc1d752abb3cf4345bd72304cc94e3fa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -133
+      value: -155.6
       objectReference: {fileID: 0}
     - target: {fileID: 184944460053395814, guid: bc1d752abb3cf4345bd72304cc94e3fa, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -983,7 +983,7 @@ PrefabInstance:
       objectReference: {fileID: 372779420}
     - target: {fileID: 8853444682734601060, guid: bc1d752abb3cf4345bd72304cc94e3fa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -212
+      value: -242
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1058,10 +1058,6 @@ PrefabInstance:
     - target: {fileID: 1049313952252358342, guid: a0754cf2178ad9548ba4d3a4db27c9f0, type: 3}
       propertyPath: m_Name
       value: GeradorInimigos
-      objectReference: {fileID: 0}
-    - target: {fileID: 1049313952252358342, guid: a0754cf2178ad9548ba4d3a4db27c9f0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1800874951521438013, guid: a0754cf2178ad9548ba4d3a4db27c9f0, type: 3}
       propertyPath: pontosTexto
